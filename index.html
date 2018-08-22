@@ -1,0 +1,1441 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Smartprix</title>
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/util.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
+    <link rel='stylesheet prefetch' href='http://code.jquery.com/ui/1.11.4/themes/smoothness/jquery-ui.css'>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href="https://fonts.googleapis.com/css?family=Courgette" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:200i,300,300i,400,400i,600,600i,700,700i,900,900i" rel="stylesheet">
+</head>
+<body>
+    <!--header up-->
+    <div class="nav_up">
+        <div class="row">
+            <div class="col-md-2 col-lg-2 col-xs-4 col-sm-4 left_top_bar1">
+                <div class="logo_img">
+                    <img src="images/logo/logo.png" class="img-responsive"/>
+                </div>
+            </div>
+            <div class="col-md-1 col-lg-1 col-xs-2 col-sm-2" style="padding-left:0px !important;padding-right:0px !important;background-color:#edeff1;height:38px;">
+                <div class="ham"><span style="font-size:30px;cursor:pointer" onclick="openNav()"><i class="fa fa-home" style="color:#4692f0;"></i></span></div>
+            </div>
+            <div class="col-md-4 col-lg-4 col-md-6 col-sm-6 col-xs-6 left_top_bar">
+                <div class="row mob_margin">
+                    <div class="col-lg-10 col-md-10 col-sm-6 col-xs-6 paddingclass">
+                        <i class="fa fa-star drop_icn"></i>
+                        <input type = "text" class="form-control new_form_set" placeholder="Search..."/>
+                    </div>
+                    <div class="col-lg-1 col-md-1 paddingclass1">
+                        <span class="search_icon">
+                            <i class="fa fa-search"></i>
+                        </span>
+                    </div>
+                    <div class="col-lg-1 col-md-1 mob_div">
+                            &nbsp;
+                    </div>
+                </div>
+            </div>  
+            <div class="col-md-5 col-lg-5 right_top_bar">
+                <ul class="link_lst">
+                    <li><a href="#"><i class="fa fa-edit p-r-5"></i>Signup</a></li>
+                    <li><a href="#"><i class="fa fa-user p-r-5"></i>Profile</a></li>
+                    <ul class="scl_lst">
+                        <li><a href="#"><b>Follow us on:</b></a></li>
+                        <li><a href="#"><i class="fa fa-facebook-f"></i></a></li>
+                        <li><a href="#"><i class="fa fa-google-plus"></i></a></li>
+                        <li><a href="#"><i class="fa fa-linkedin"></i></a></li>
+                        <li><a href="#"><i class="fa fa-twitter"></i></a></li>
+                    </ul>
+                </ul>
+            </div>
+        </div>
+        <div class="row">
+            <div id="mySidenav" class="sidenav">
+                <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+                <a href="#"><i class="fa fa-mobile" style="padding-right:10px;color:crimson;"></i>Mobile</a>
+                <a href="#"><i class="fa fa-tablet" style="padding-right:10px;color:crimson;"></i>Tablet</a>
+                <a href="#"><i class="fa fa-laptop" style="padding-right:10px;color:crimson;"></i>Laptop</a>
+                <a href="#"><i class="fa fa-camera" style="padding-right:10px;color:crimson;"></i>Camera</a>
+                <a href="#"><i class="fa fa-user" style="padding-right:10px;color:crimson;"></i>Personal care &amp; Appliances</a>
+                <a href="#"><i class="fa fa-headphones" style="padding-right:10px;color:crimson;"></i>Accessories</a>
+                <a href="#"><i class="fa fa-book" style="padding-right:10px;color:crimson;"></i>Books</a>
+                <a href="#"><i class="fa fa-check-circle" style="padding-right:10px;color:crimson;"></i>Deals</a>
+                <a href="#"><i class="fa fa-paperclip" style="padding-right:10px;color:crimson;"></i>News</a>
+                <a href="#"><i class="fa fa-edit" style="padding-right:10px;color:crimson;"></i>Signup</a>
+                <a href="#"><i class="fa fa-user" style="padding-right:10px;color:crimson;"></i>Profile</a>
+            </div>
+        </div>
+    </div>
+    <!--header up ends-->
+     <!--header down ends-->
+     <section class="nav_down">
+         <div class="container">
+            <nav class="navbar">
+            <div class="navbar-header">
+                <button class="navbar-toggle" type="button" data-toggle="collapse" data-target=".js-navbar-collapse">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="#">Home</a>
+            </div>
+            
+            <div class="collapse navbar-collapse js-navbar-collapse">
+                <ul class="nav navbar-nav">
+                    <li class="dropdown mega-dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">Mobiles <span class="caret"></span></a>				
+                        <ul class="dropdown-menu mega-dropdown-menu">
+                            <li class="col-sm-3">
+                                <ul>
+                                    <li class="dropdown-header">Mobiles</li>                            
+                                    <div id="mobiles" class="carousel slide" data-ride="carousel">
+                                        <div class="carousel-inner">
+                                        <div class="item active">
+                                            <a href="#"><img src="http://placehold.it/254x150/c1222f/f5f5f5/&text=New+Collection" class="img-responsive" alt="product 1"></a>
+                                            <h4><small>Samsung Galaxy J8</small></h4>                                        
+                                            <button class="btn btn-primary" type="button">Rs.49,999</button> <button href="#" class="btn btn-default" type="button"><span class="glyphicon glyphicon-heart"></span> Add to Wishlist</button>       
+                                        </div><!-- End Item -->
+                                        <div class="item">
+                                            <a href="#"><img src="http://placehold.it/254x150/3498db/f5f5f5/&text=New+Collection" class="img-responsive" alt="product 2"></a>
+                                            <h4><small>Samsung Galaxy J7 Max</small></h4>                                        
+                                            <button class="btn btn-primary" type="button">Rs.9,9999</button> <button href="#" class="btn btn-default" type="button"><span class="glyphicon glyphicon-heart"></span> Add to Wishlist</button>        
+                                        </div><!-- End Item -->
+                                        <div class="item">
+                                            <a href="#"><img src="http://placehold.it/254x150/2ecc71/f5f5f5/&text=New+Collection" class="img-responsive" alt="product 3"></a>
+                                            <h4><small>Nokia X6</small></h4>                                        
+                                            <button class="btn btn-primary" type="button">Rs.49,999</button> <button href="#" class="btn btn-default" type="button"><span class="glyphicon glyphicon-heart"></span> Add to Wishlist</button>      
+                                        </div><!-- End Item -->                                
+                                        </div><!-- End Carousel Inner -->
+                                        <!-- Controls -->
+                                        <a class="left carousel-control" href="#mobiles" role="button" data-slide="prev">
+                                        <i class="fa fa-arrow-left arrow"></i>
+                                        <span class="sr-only">Previous</span>
+                                        </a>
+                                        <a class="right carousel-control" href="#mobiles" role="button" data-slide="next">
+                                        <i class="fa fa-arrow-right arrow"></i>
+                                        <span class="sr-only">Next</span>
+                                        </a>
+                                    </div><!-- /.carousel -->
+                                    <li class="divider"></li>
+                                    <li><a href="#">View all Collection <i class="fa fa-arrow-right arrow"></i></a></li>
+                                </ul>
+                            </li>
+                            <li class="col-sm-2">
+                                <ul>
+                                    <li class="dropdown-header">Brands</li>
+                                    <li><a href="#">Nokia</a></li>
+                                    <li><a href="#">Samsung</a></li>
+                                    <li><a href="#">Xiaomi(Mi)</a></li>
+                                    <li><a href="#">Oppo</a></li>
+                                    <li><a href="#">Vivo</a></li>
+                                    <li><a href="#">HTC</a></li>
+                                    <li><a href="#">Motorola</a></li>
+                                    <li><a href="#">Micromax</a></li>
+                                    <li><a href="#">Lenovo</a></li>
+                                    <li><a href="#">Sony</a></li>
+                                    <li><a href="#">Gionee</a></li>
+                                    <li><a href="#">Lyf</a></li>
+                                    <li><a href="#">See all brands<i class="fa fa-arrow-right arrow"></i></a></li>
+                                    <li class="divider"></li>
+                                </ul>
+                            </li>
+                            <li class="col-sm-2">
+                                <ul>
+                                    <li class="dropdown-header">Categories  </li>
+                                    <li><a href="#">Smart Phones</a></li>	
+                                    <li><a href="#">Apple iPhones</a></li>
+                                    <li><a href="#">Android Phones</a></li>
+                                    <li class="divider"></li>
+                                    <li><a href="#">4G Mobiles</a></li>
+                                    <li><a href="#">3G Mobiles</a></li>
+                                    <li><a href="#">Dual Sim Mobiles</a></li>
+                                    <li><a href="#">4gb RAM Mobiles</a></li>
+                                    <li class="divider"></li>
+                                    <li><a href="#">Big Battery Phones</a></li>
+                                    <li><a href="#">Selfie Phones</a></li>
+                                    <li><a href="#">Fingerprint Phones</a></li>
+                                    <li><a href="#">Mobile Accessories<i class="fa fa-arrow-right arrow"></i></a></li>
+                                </ul>
+                            </li>
+                            <li class="col-sm-2">
+                                <ul>
+                                    <li class="dropdown-header">More</li>
+                                    <li><a href="#">Lowest Price Mobiles</a></li>
+                                    <li><a href="#">Most Popular Mobiles</a></li>
+                                    <li><a href="#">Best Rated Mobiles</a></li>
+                                    <li><a href="#">Latest Mobiles</a></li>
+                                    <li><a href="#">Upcoming Mobiles</a></li>
+                                </ul>
+                            </li>
+                            <li class="col-sm-2">
+                                <ul>
+                                    <li class="dropdown-header">Price</li>
+                                    <li><a href="#">Less than Rs.5000</a></li>
+                                    <li><a href="#">Rs.5000 to Rs.10,000</a></li>
+                                    <li><a href="#">Rs.10,000 to Rs.15,000</a></li>
+                                    <li><a href="#">Rs.15,000 to Rs.20,000</a></li>
+                                    <li><a href="#">More than Rs.20,000</a></li>                          
+                                </ul>
+                            </li>
+                        </ul>				
+                    </li>
+                    <li class="dropdown mega-dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">Tablets <span class="caret"></span></a>				
+                        <ul class="dropdown-menu mega-dropdown-menu">
+                            <li class="col-sm-2">
+                                <ul>
+                                    <li class="dropdown-header">Brands</li>
+                                    <li><a href="#">Nokia</a></li>
+                                    <li><a href="#">Samsung</a></li>
+                                    <li><a href="#">Xiaomi(Mi)</a></li>
+                                    <li><a href="#">Oppo</a></li>
+                                    <li><a href="#">Vivo</a></li>
+                                    <li><a href="#">HTC</a></li>
+                                    <li><a href="#">Motorola</a></li>
+                                    <li><a href="#">Micromax</a></li>
+                                    <li><a href="#">Lenovo</a></li>
+                                    <li><a href="#">Sony</a></li>
+                                    <li><a href="#">Gionee</a></li>
+                                    <li><a href="#">Lyf</a></li>
+                                    <li><a href="#">See all brands<i class="fa fa-arrow-right arrow"></i></a></li>
+                                    <li class="divider"></li>
+                                </ul>
+                            </li>
+                            <li class="col-sm-2">
+                                <ul>
+                                    <li class="dropdown-header">Categories  </li>
+                                    <li><a href="#">Smart Phones</a></li>	
+                                    <li><a href="#">Apple iPhones</a></li>
+                                    <li><a href="#">Android Phones</a></li>
+                                    <li class="divider"></li>
+                                    <li><a href="#">4G Mobiles</a></li>
+                                    <li><a href="#">3G Mobiles</a></li>
+                                    <li><a href="#">Dual Sim Mobiles</a></li>
+                                    <li><a href="#">4gb RAM Mobiles</a></li>
+                                    <li class="divider"></li>
+                                    <li><a href="#">Big Battery Phones</a></li>
+                                    <li><a href="#">Selfie Phones</a></li>
+                                    <li><a href="#">Fingerprint Phones</a></li>
+                                    <li><a href="#">Mobile Accessories<i class="fa fa-arrow-right arrow"></i></a></li>
+                                </ul>
+                            </li>
+                            <li class="col-sm-2">
+                                <ul>
+                                    <li class="dropdown-header">More</li>
+                                    <li><a href="#">Lowest Price Mobiles</a></li>
+                                    <li><a href="#">Most Popular Mobiles</a></li>
+                                    <li><a href="#">Best Rated Mobiles</a></li>
+                                    <li><a href="#">Latest Mobiles</a></li>
+                                    <li><a href="#">Upcoming Mobiles</a></li>
+                                </ul>
+                            </li>
+                            <li class="col-sm-2">
+                                <ul>
+                                    <li class="dropdown-header">Price</li>
+                                    <li><a href="#">Less than Rs.5000</a></li>
+                                    <li><a href="#">Rs.5000 to Rs.10,000</a></li>
+                                    <li><a href="#">Rs.10,000 to Rs.15,000</a></li>
+                                    <li><a href="#">Rs.15,000 to Rs.20,000</a></li>
+                                    <li><a href="#">More than Rs.20,000</a></li>                          
+                                </ul>
+                            </li>
+                            <li class="col-sm-3">
+                                <ul>
+                                    <li class="dropdown-header">Tablets</li>                            
+                                    <div id="tablets" class="carousel slide" data-ride="carousel">
+                                        <div class="carousel-inner">
+                                        <div class="item active">
+                                            <a href="#"><img src="http://placehold.it/254x150/c1222f/f5f5f5/&text=New+Collection" class="img-responsive" alt="product 1"></a>
+                                            <h4><small>Samsung Galaxy J8</small></h4>                                        
+                                            <button class="btn btn-primary" type="button">Rs.49,999</button> <button href="#" class="btn btn-default" type="button"><span class="glyphicon glyphicon-heart"></span> Add to Wishlist</button>       
+                                        </div><!-- End Item -->
+                                        <div class="item">
+                                            <a href="#"><img src="http://placehold.it/254x150/3498db/f5f5f5/&text=New+Collection" class="img-responsive" alt="product 2"></a>
+                                            <h4><small>Samsung Galaxy J7 Max</small></h4>                                        
+                                            <button class="btn btn-primary" type="button">Rs.9,9999</button> <button href="#" class="btn btn-default" type="button"><span class="glyphicon glyphicon-heart"></span> Add to Wishlist</button>        
+                                        </div><!-- End Item -->
+                                        <div class="item">
+                                            <a href="#"><img src="http://placehold.it/254x150/2ecc71/f5f5f5/&text=New+Collection" class="img-responsive" alt="product 3"></a>
+                                            <h4><small>Nokia X6</small></h4>                                        
+                                            <button class="btn btn-primary" type="button">Rs.49,999</button> <button href="#" class="btn btn-default" type="button"><span class="glyphicon glyphicon-heart"></span> Add to Wishlist</button>      
+                                        </div><!-- End Item -->                                
+                                        </div><!-- End Carousel Inner -->
+                                        <!-- Controls -->
+                                        <a class="left carousel-control" href="#tablets" role="button" data-slide="prev">
+                                        <i class="fa fa-arrow-left arrow"></i>
+                                        <span class="sr-only">Previous</span>
+                                        </a>
+                                        <a class="right carousel-control" href="#tablets" role="button" data-slide="next">
+                                        <i class="fa fa-arrow-right arrow"></i>
+                                        <span class="sr-only">Next</span>
+                                        </a>
+                                    </div><!-- /.carousel -->
+                                    <li class="divider"></li>
+                                    <li><a href="#">View all Collection <i class="fa fa-arrow-right arrow"></i></a></li>
+                                </ul>
+                            </li>
+                        </ul>				
+                    </li>
+                    <li class="dropdown mega-dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">Laptop <span class="caret"></span></a>				
+                        <ul class="dropdown-menu mega-dropdown-menu">
+                            <li class="col-sm-3">
+                                <ul>
+                                    <li class="dropdown-header">Laptop</li>                            
+                                    <div id="laptops" class="carousel slide" data-ride="carousel">
+                                        <div class="carousel-inner">
+                                        <div class="item active">
+                                            <a href="#"><img src="http://placehold.it/254x150/c1222f/f5f5f5/&text=New+Collection" class="img-responsive" alt="product 1"></a>
+                                            <h4><small>Samsung Galaxy J8</small></h4>                                        
+                                            <button class="btn btn-primary" type="button">Rs.49,999</button> <button href="#" class="btn btn-default" type="button"><span class="glyphicon glyphicon-heart"></span> Add to Wishlist</button>       
+                                        </div><!-- End Item -->
+                                        <div class="item">
+                                            <a href="#"><img src="http://placehold.it/254x150/3498db/f5f5f5/&text=New+Collection" class="img-responsive" alt="product 2"></a>
+                                            <h4><small>Samsung Galaxy J7 Max</small></h4>                                        
+                                            <button class="btn btn-primary" type="button">Rs.9,9999</button> <button href="#" class="btn btn-default" type="button"><span class="glyphicon glyphicon-heart"></span> Add to Wishlist</button>        
+                                        </div><!-- End Item -->
+                                        <div class="item">
+                                            <a href="#"><img src="http://placehold.it/254x150/2ecc71/f5f5f5/&text=New+Collection" class="img-responsive" alt="product 3"></a>
+                                            <h4><small>Nokia X6</small></h4>                                        
+                                            <button class="btn btn-primary" type="button">Rs.49,999</button> <button href="#" class="btn btn-default" type="button"><span class="glyphicon glyphicon-heart"></span> Add to Wishlist</button>      
+                                        </div><!-- End Item -->                                
+                                        </div><!-- End Carousel Inner -->
+                                        <!-- Controls -->
+                                        <a class="left carousel-control" href="#laptops" role="button" data-slide="prev">
+                                        <i class="fa fa-arrow-left arrow"></i>
+                                        <span class="sr-only">Previous</span>
+                                        </a>
+                                        <a class="right carousel-control" href="#laptops" role="button" data-slide="next">
+                                        <i class="fa fa-arrow-right arrow"></i>
+                                        <span class="sr-only">Next</span>
+                                        </a>
+                                    </div><!-- /.carousel -->
+                                    <li class="divider"></li>
+                                    <li><a href="#">View all Collection <i class="fa fa-arrow-right arrow"></i></a></li>
+                                </ul>
+                            </li>
+                            <li class="col-sm-2">
+                                <ul>
+                                    <li class="dropdown-header">Brands</li>
+                                    <li><a href="#">Nokia</a></li>
+                                    <li><a href="#">Samsung</a></li>
+                                    <li><a href="#">Xiaomi(Mi)</a></li>
+                                    <li><a href="#">Oppo</a></li>
+                                    <li><a href="#">Vivo</a></li>
+                                    <li><a href="#">HTC</a></li>
+                                    <li><a href="#">Motorola</a></li>
+                                    <li><a href="#">Micromax</a></li>
+                                    <li><a href="#">Lenovo</a></li>
+                                    <li><a href="#">Sony</a></li>
+                                    <li><a href="#">Gionee</a></li>
+                                    <li><a href="#">Lyf</a></li>
+                                    <li><a href="#">See all brands<i class="fa fa-arrow-right arrow p-l-5"></i></a></li>
+                                    <li class="divider"></li>
+                                </ul>
+                            </li>
+                            <li class="col-sm-2">
+                                <ul>
+                                    <li class="dropdown-header">Categories  </li>
+                                    <li><a href="#">Smart Phones</a></li>	
+                                    <li><a href="#">Apple iPhones</a></li>
+                                    <li><a href="#">Android Phones</a></li>
+                                    <li class="divider"></li>
+                                    <li><a href="#">4G Mobiles</a></li>
+                                    <li><a href="#">3G Mobiles</a></li>
+                                    <li><a href="#">Dual Sim Mobiles</a></li>
+                                    <li><a href="#">4gb RAM Mobiles</a></li>
+                                    <li class="divider"></li>
+                                    <li><a href="#">Big Battery Phones</a></li>
+                                    <li><a href="#">Selfie Phones</a></li>
+                                    <li><a href="#">Fingerprint Phones</a></li>
+                                    <li><a href="#">Mobile Accessories<i class="fa fa-arrow-right arrow p-l-5"></i></a></li>
+                                </ul>
+                            </li>
+                            <li class="col-sm-2">
+                                <ul>
+                                    <li class="dropdown-header">More</li>
+                                    <li><a href="#">Lowest Price Mobiles</a></li>
+                                    <li><a href="#">Most Popular Mobiles</a></li>
+                                    <li><a href="#">Best Rated Mobiles</a></li>
+                                    <li><a href="#">Latest Mobiles</a></li>
+                                    <li><a href="#">Upcoming Mobiles</a></li>
+                                </ul>
+                            </li>
+                            <li class="col-sm-2">
+                                <ul>
+                                    <li class="dropdown-header">Price</li>
+                                    <li><a href="#">Less than Rs.5000</a></li>
+                                    <li><a href="#">Rs.5000 to Rs.10,000</a></li>
+                                    <li><a href="#">Rs.10,000 to Rs.15,000</a></li>
+                                    <li><a href="#">Rs.15,000 to Rs.20,000</a></li>
+                                    <li><a href="#">More than Rs.20,000</a></li>                          
+                                </ul>
+                            </li>
+                        </ul>				
+                    </li>
+                    <li class="dropdown mega-dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">Camera <span class="caret"></span></a>				
+                        <ul class="dropdown-menu mega-dropdown-menu">
+                            <li class="col-sm-2">
+                                <ul>
+                                    <li class="dropdown-header">Brands</li>
+                                    <li><a href="#">Nokia</a></li>
+                                    <li><a href="#">Samsung</a></li>
+                                    <li><a href="#">Xiaomi(Mi)</a></li>
+                                    <li><a href="#">Oppo</a></li>
+                                    <li><a href="#">Vivo</a></li>
+                                    <li><a href="#">HTC</a></li>
+                                    <li><a href="#">Motorola</a></li>
+                                    <li><a href="#">Micromax</a></li>
+                                    <li><a href="#">Lenovo</a></li>
+                                    <li><a href="#">Sony</a></li>
+                                    <li><a href="#">Gionee</a></li>
+                                    <li><a href="#">Lyf</a></li>
+                                    <li><a href="#">See all brands<i class="fa fa-arrow-right arrow p-l-5"></i></a></li>
+                                    <li class="divider"></li>
+                                </ul>
+                            </li>
+                            <li class="col-sm-2">
+                                <ul>
+                                    <li class="dropdown-header">Categories  </li>
+                                    <li><a href="#">Smart Phones</a></li>	
+                                    <li><a href="#">Apple iPhones</a></li>
+                                    <li><a href="#">Android Phones</a></li>
+                                    <li class="divider"></li>
+                                    <li><a href="#">4G Mobiles</a></li>
+                                    <li><a href="#">3G Mobiles</a></li>
+                                    <li><a href="#">Dual Sim Mobiles</a></li>
+                                    <li><a href="#">4gb RAM Mobiles</a></li>
+                                    <li class="divider"></li>
+                                    <li><a href="#">Big Battery Phones</a></li>
+                                    <li><a href="#">Selfie Phones</a></li>
+                                    <li><a href="#">Fingerprint Phones</a></li>
+                                    <li><a href="#">Mobile Accessories<i class="fa fa-arrow-right arrow p-l-5"></i></a></li>
+                                </ul>
+                            </li>
+                            <li class="col-sm-2">
+                                <ul>
+                                    <li class="dropdown-header">More</li>
+                                    <li><a href="#">Lowest Price Mobiles</a></li>
+                                    <li><a href="#">Most Popular Mobiles</a></li>
+                                    <li><a href="#">Best Rated Mobiles</a></li>
+                                    <li><a href="#">Latest Mobiles</a></li>
+                                    <li><a href="#">Upcoming Mobiles</a></li>
+                                </ul>
+                            </li>
+                            <li class="col-sm-2">
+                                <ul>
+                                    <li class="dropdown-header">Price</li>
+                                    <li><a href="#">Less than Rs.5000</a></li>
+                                    <li><a href="#">Rs.5000 to Rs.10,000</a></li>
+                                    <li><a href="#">Rs.10,000 to Rs.15,000</a></li>
+                                    <li><a href="#">Rs.15,000 to Rs.20,000</a></li>
+                                    <li><a href="#">More than Rs.20,000</a></li>                          
+                                </ul>
+                            </li>
+                            <li class="col-sm-3">
+                                <ul>
+                                    <li class="dropdown-header">Camera</li>                            
+                                    <div id="cameras" class="carousel slide" data-ride="carousel">
+                                        <div class="carousel-inner">
+                                        <div class="item active">
+                                            <a href="#"><img src="http://placehold.it/254x150/c1222f/f5f5f5/&text=New+Collection" class="img-responsive" alt="product 1"></a>
+                                            <h4><small>Samsung Galaxy J8</small></h4>                                        
+                                            <button class="btn btn-primary" type="button">Rs.49,999</button> <button href="#" class="btn btn-default" type="button"><span class="glyphicon glyphicon-heart"></span> Add to Wishlist</button>       
+                                        </div><!-- End Item -->
+                                        <div class="item">
+                                            <a href="#"><img src="http://placehold.it/254x150/3498db/f5f5f5/&text=New+Collection" class="img-responsive" alt="product 2"></a>
+                                            <h4><small>Samsung Galaxy J7 Max</small></h4>                                        
+                                            <button class="btn btn-primary" type="button">Rs.9,9999</button> <button href="#" class="btn btn-default" type="button"><span class="glyphicon glyphicon-heart"></span> Add to Wishlist</button>        
+                                        </div><!-- End Item -->
+                                        <div class="item">
+                                            <a href="#"><img src="http://placehold.it/254x150/2ecc71/f5f5f5/&text=New+Collection" class="img-responsive" alt="product 3"></a>
+                                            <h4><small>Nokia X6</small></h4>                                        
+                                            <button class="btn btn-primary" type="button">Rs.49,999</button> <button href="#" class="btn btn-default" type="button"><span class="glyphicon glyphicon-heart"></span> Add to Wishlist</button>      
+                                        </div><!-- End Item -->                                
+                                        </div><!-- End Carousel Inner -->
+                                        <!-- Controls -->
+                                        <a class="left carousel-control" href="#cameras" role="button" data-slide="prev">
+                                        <i class="fa fa-arrow-left arrow"></i>
+                                        <span class="sr-only">Previous</span>
+                                        </a>
+                                        <a class="right carousel-control" href="#cameras" role="button" data-slide="next">
+                                        <i class="fa fa-arrow-right arrow"></i>
+                                        <span class="sr-only">Next</span>
+                                        </a>
+                                    </div><!-- /.carousel -->
+                                    <li class="divider"></li>
+                                    <li><a href="#">View all Collection <i class="fa fa-arrow-right arrow"></i></a></li>
+                                </ul>
+                            </li>
+                        </ul>				
+                    </li>
+                    <li class="dropdown mega-dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">Personal Care &amp; Appliances <span class="caret"></span></a>				
+                        <ul class="dropdown-menu mega-dropdown-menu">
+                            <li class="col-sm-3">
+                                <ul>
+                                    <li class="dropdown-header p-r-10">Personal Care &amp; Appliances</li>                            
+                                    <div id="personalcare" class="carousel slide" data-ride="carousel">
+                                        <div class="carousel-inner">
+                                        <div class="item active">
+                                            <a href="#"><img src="http://placehold.it/254x150/c1222f/f5f5f5/&text=New+Collection" class="img-responsive" alt="product 1"></a>
+                                            <h4><small>Samsung Galaxy J8</small></h4>                                        
+                                            <button class="btn btn-primary" type="button">Rs.49,999</button> <button href="#" class="btn btn-default" type="button"><span class="glyphicon glyphicon-heart"></span> Add to Wishlist</button>       
+                                        </div><!-- End Item -->
+                                        <div class="item">
+                                            <a href="#"><img src="http://placehold.it/254x150/3498db/f5f5f5/&text=New+Collection" class="img-responsive" alt="product 2"></a>
+                                            <h4><small>Samsung Galaxy J7 Max</small></h4>                                        
+                                            <button class="btn btn-primary" type="button">Rs.9,9999</button> <button href="#" class="btn btn-default" type="button"><span class="glyphicon glyphicon-heart"></span> Add to Wishlist</button>        
+                                        </div><!-- End Item -->
+                                        <div class="item">
+                                            <a href="#"><img src="http://placehold.it/254x150/2ecc71/f5f5f5/&text=New+Collection" class="img-responsive" alt="product 3"></a>
+                                            <h4><small>Nokia X6</small></h4>                                        
+                                            <button class="btn btn-primary" type="button">Rs.49,999</button> <button href="#" class="btn btn-default" type="button"><span class="glyphicon glyphicon-heart"></span> Add to Wishlist</button>      
+                                        </div><!-- End Item -->                                
+                                        </div><!-- End Carousel Inner -->
+                                        <!-- Controls -->
+                                        <a class="left carousel-control" href="#personalcars" role="button" data-slide="prev">
+                                        <i class="fa fa-arrow-left arrow"></i>
+                                        <span class="sr-only">Previous</span>
+                                        </a>
+                                        <a class="right carousel-control" href="#personalcars" role="button" data-slide="next">
+                                        <i class="fa fa-arrow-right arrow"></i>
+                                        <span class="sr-only">Next</span>
+                                        </a>
+                                    </div><!-- /.carousel -->
+                                    <li class="divider"></li>
+                                    <li><a href="#">View all Collection <i class="fa fa-arrow-right arrow"></i></a></li>
+                                </ul>
+                            </li>
+                            <li class="col-sm-2">
+                                <ul>
+                                    <li class="dropdown-header">Brands</li>
+                                    <li><a href="#">Nokia</a></li>
+                                    <li><a href="#">Samsung</a></li>
+                                    <li><a href="#">Xiaomi(Mi)</a></li>
+                                    <li><a href="#">Oppo</a></li>
+                                    <li><a href="#">Vivo</a></li>
+                                    <li><a href="#">HTC</a></li>
+                                    <li><a href="#">Motorola</a></li>
+                                    <li><a href="#">Micromax</a></li>
+                                    <li><a href="#">Lenovo</a></li>
+                                    <li><a href="#">Sony</a></li>
+                                    <li><a href="#">Gionee</a></li>
+                                    <li><a href="#">Lyf</a></li>
+                                    <li><a href="#">See all brands<i class="fa fa-arrow-right arrow p-l-5"></i></a></li>
+                                    <li class="divider"></li>
+                                </ul>
+                            </li>
+                            <li class="col-sm-2">
+                                <ul>
+                                    <li class="dropdown-header">Categories  </li>
+                                    <li><a href="#">Smart Phones</a></li>	
+                                    <li><a href="#">Apple iPhones</a></li>
+                                    <li><a href="#">Android Phones</a></li>
+                                    <li class="divider"></li>
+                                    <li><a href="#">4G Mobiles</a></li>
+                                    <li><a href="#">3G Mobiles</a></li>
+                                    <li><a href="#">Dual Sim Mobiles</a></li>
+                                    <li><a href="#">4gb RAM Mobiles</a></li>
+                                    <li class="divider"></li>
+                                    <li><a href="#">Big Battery Phones</a></li>
+                                    <li><a href="#">Selfie Phones</a></li>
+                                    <li><a href="#">Fingerprint Phones</a></li>
+                                    <li><a href="#">Mobile Accessories<i class="fa fa-arrow-right arrow p-l-5"></i></a></li>
+                                </ul>
+                            </li>
+                            <li class="col-sm-2">
+                                <ul>
+                                    <li class="dropdown-header">More</li>
+                                    <li><a href="#">Lowest Price Mobiles</a></li>
+                                    <li><a href="#">Most Popular Mobiles</a></li>
+                                    <li><a href="#">Best Rated Mobiles</a></li>
+                                    <li><a href="#">Latest Mobiles</a></li>
+                                    <li><a href="#">Upcoming Mobiles</a></li>
+                                </ul>
+                            </li>
+                            <li class="col-sm-2">
+                                <ul>
+                                    <li class="dropdown-header">Price</li>
+                                    <li><a href="#">Less than Rs.5000</a></li>
+                                    <li><a href="#">Rs.5000 to Rs.10,000</a></li>
+                                    <li><a href="#">Rs.10,000 to Rs.15,000</a></li>
+                                    <li><a href="#">Rs.15,000 to Rs.20,000</a></li>
+                                    <li><a href="#">More than Rs.20,000</a></li>                          
+                                </ul>
+                            </li>
+                        </ul>				
+                    </li>
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Accessories<span class="caret"></span></a>
+                        <ul class="dropdown-menu" role="menu">
+                            <li><a href="#">Mobile Accessories</a></li>
+                            <li><a href="#">All Mobile Accessories</a></li>
+                            <li class="divider"></li>
+                            <li><a href="#">Smart Watches</a></li>
+                            <li class="divider"></li>
+                            <li><a href="#">Memory Cards</a></li>
+                            <li><a href="#">Card Readers</a></li>
+                            <li><a href="#">Case &amp; Covers</a></li>
+                            <li><a href="#">Headphone &amp; Headsets</a></li>
+                            <li class="divider"></li>
+                            <li><a href="#">Batteries</a></li>
+                            <li><a href="#">Chargers</a></li>
+                            <li><a href="#">Power Banks</a></li>
+                            <li><a href="#">Data Cables</a></li>
+                            <li class="divider"></li>
+                            <li><a href="#">Cleaning Kits</a></li>
+                            <li><a href="#">Screen Guards</a></li>
+                            <li><a href="#">Docks</a></li>
+                        </ul>
+                    </li>
+                    <li class="dropdown mega-dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">Books <span class="caret"></span></a>				
+                        <ul class="dropdown-menu mega-dropdown-menu">
+                            <li class="col-sm-2">
+                                <ul>
+                                    <li class="dropdown-header">Brands</li>
+                                    <li><a href="#">Nokia</a></li>
+                                    <li><a href="#">Samsung</a></li>
+                                    <li><a href="#">Xiaomi(Mi)</a></li>
+                                    <li><a href="#">Oppo</a></li>
+                                    <li><a href="#">Vivo</a></li>
+                                    <li><a href="#">HTC</a></li>
+                                    <li><a href="#">Motorola</a></li>
+                                    <li><a href="#">Micromax</a></li>
+                                    <li><a href="#">Lenovo</a></li>
+                                    <li><a href="#">Sony</a></li>
+                                    <li><a href="#">Gionee</a></li>
+                                    <li><a href="#">Lyf</a></li>
+                                    <li><a href="#">See all brands<i class="fa fa-arrow-right arrow p-l-5"></i></a></li>
+                                    <li class="divider"></li>
+                                </ul>
+                            </li>
+                            <li class="col-sm-2">
+                                <ul>
+                                    <li class="dropdown-header">Categories  </li>
+                                    <li><a href="#">Smart Phones</a></li>	
+                                    <li><a href="#">Apple iPhones</a></li>
+                                    <li><a href="#">Android Phones</a></li>
+                                    <li class="divider"></li>
+                                    <li><a href="#">4G Mobiles</a></li>
+                                    <li><a href="#">3G Mobiles</a></li>
+                                    <li><a href="#">Dual Sim Mobiles</a></li>
+                                    <li><a href="#">4gb RAM Mobiles</a></li>
+                                    <li class="divider"></li>
+                                    <li><a href="#">Big Battery Phones</a></li>
+                                    <li><a href="#">Selfie Phones</a></li>
+                                    <li><a href="#">Fingerprint Phones</a></li>
+                                    <li><a href="#">Mobile Accessories<i class="fa fa-arrow-right arrow p-l-5"></i></a></li>
+                                </ul>
+                            </li>
+                            <li class="col-sm-2">
+                                <ul>
+                                    <li class="dropdown-header">More</li>
+                                    <li><a href="#">Lowest Price Mobiles</a></li>
+                                    <li><a href="#">Most Popular Mobiles</a></li>
+                                    <li><a href="#">Best Rated Mobiles</a></li>
+                                    <li><a href="#">Latest Mobiles</a></li>
+                                    <li><a href="#">Upcoming Mobiles</a></li>
+                                </ul>
+                            </li>
+                            <li class="col-sm-2">
+                                <ul>
+                                    <li class="dropdown-header">Price</li>
+                                    <li><a href="#">Less than Rs.5000</a></li>
+                                    <li><a href="#">Rs.5000 to Rs.10,000</a></li>
+                                    <li><a href="#">Rs.10,000 to Rs.15,000</a></li>
+                                    <li><a href="#">Rs.15,000 to Rs.20,000</a></li>
+                                    <li><a href="#">More than Rs.20,000</a></li>                          
+                                </ul>
+                            </li>
+                            <li class="col-sm-3">
+                                <ul>
+                                    <li class="dropdown-header">Books</li>                            
+                                    <div id="books" class="carousel slide" data-ride="carousel">
+                                        <div class="carousel-inner">
+                                        <div class="item active">
+                                            <a href="#"><img src="http://placehold.it/254x150/c1222f/f5f5f5/&text=New+Collection" class="img-responsive" alt="product 1"></a>
+                                            <h4><small>Samsung Galaxy J8</small></h4>                                        
+                                            <button class="btn btn-primary" type="button">Rs.49,999</button> <button href="#" class="btn btn-default" type="button"><span class="glyphicon glyphicon-heart"></span> Add to Wishlist</button>       
+                                        </div><!-- End Item -->
+                                        <div class="item">
+                                            <a href="#"><img src="http://placehold.it/254x150/3498db/f5f5f5/&text=New+Collection" class="img-responsive" alt="product 2"></a>
+                                            <h4><small>Samsung Galaxy J7 Max</small></h4>                                        
+                                            <button class="btn btn-primary" type="button">Rs.9,9999</button> <button href="#" class="btn btn-default" type="button"><span class="glyphicon glyphicon-heart"></span> Add to Wishlist</button>        
+                                        </div><!-- End Item -->
+                                        <div class="item">
+                                            <a href="#"><img src="http://placehold.it/254x150/2ecc71/f5f5f5/&text=New+Collection" class="img-responsive" alt="product 3"></a>
+                                            <h4><small>Nokia X6</small></h4>                                        
+                                            <button class="btn btn-primary" type="button">Rs.49,999</button> <button href="#" class="btn btn-default" type="button"><span class="glyphicon glyphicon-heart"></span> Add to Wishlist</button>      
+                                        </div><!-- End Item -->                                
+                                        </div><!-- End Carousel Inner -->
+                                        <!-- Controls -->
+                                        <a class="left carousel-control" href="#books" role="button" data-slide="prev">
+                                        <i class="fa fa-arrow-left arrow"></i>
+                                        <span class="sr-only">Previous</span>
+                                        </a>
+                                        <a class="right carousel-control" href="#books" role="button" data-slide="next">
+                                        <i class="fa fa-arrow-right arrow"></i>
+                                        <span class="sr-only">Next</span>
+                                        </a>
+                                    </div><!-- /.carousel -->
+                                    <li class="divider"></li>
+                                    <li><a href="#">View all Collection <i class="fa fa-arrow-right arrow"></i></a></li>
+                                </ul>
+                            </li>
+                        </ul>				
+                    </li>
+                    <li><a href="#">Deals</a></li>
+                    <li><a href="#">News</a></li>
+                </ul>
+            </div><!-- /.nav-collapse -->
+            </nav>
+         </div>
+     </section>
+      <!--header down ends-->
+
+     <!--banner section-->
+     <div class="banner">
+         <div class="container">
+             <div class="row">
+                 <div class="col-md-8 col-lg-8 col-xs-12 col-sm-12">
+                    <div id="banner" class="carousel slide" data-ride="carousel">
+                            <!-- Indicators -->
+                            <ol class="carousel-indicators">
+                                <li data-target="#banner" data-slide-to="0" class="active"></li>
+                                <li data-target="#banner" data-slide-to="1"></li>
+                                <li data-target="#banner" data-slide-to="2"></li>
+                            </ol>
+                            <div class="carousel-inner">
+                                <div class="item active">
+                                <img src="http://bootstrap-ecommerce.com/main/images/banners/slide2.jpg" alt="Los Angeles" style="width:100%;">
+                                <div class="carousel-caption">
+                                    <h3>Mobile Phones</h3>
+                                    <p>For every pocket</p>
+                                </div>
+                                </div>
+                                <div class="item">
+                                <img src="http://bootstrap-ecommerce.com/main/images/banners/slide1.jpg" alt="First slide" alt="Chicago" style="width:100%;">
+                                <div class="carousel-caption">
+                                    <h3>Laptop</h3>
+                                    <p>Cheapest Rates</p>
+                                </div>
+                                </div>
+                                <div class="item">
+                                <img src="http://bootstrap-ecommerce.com/main/images/banners/slide3.jpg" alt="New York" style="width:100%;">
+                                <div class="carousel-caption">
+                                    <h3>Tablets</h3>
+                                    <p>We have the best stock!</p>
+                                </div>
+                                </div>
+                            
+                            </div>
+                        
+                            <!-- Left and right controls -->
+                            <a class="left carousel-control bnr_lft" href="#banner" data-slide="prev">
+                                <i class="fa fa-angle-left"></i>
+                                <span class="sr-only">Previous</span>
+                            </a>
+                            <a class="right carousel-control bnr_rht" href="#banner" data-slide="next">
+                                <i class="fa fa-angle-right"></i>
+                                <span class="sr-only">Next</span>
+                            </a>
+                            </div>
+                 </div>
+                 <div class="col-lg-4 col-md-4 col-sm-12 col-xs-12 mob_view">
+                    <div class="phone_fight">
+                        <div class="row">
+                            <div class="col-md-12 col-lg-12 col-sm-12 text-center">   
+                                <h1 class="ribbon_txt ribbon">Deal of the day</h1>
+                                <img src="images/deal.png" class="img-responsive center_img today_img" alt="today's offer" />
+                                <div class="phone_name text-center margin-bottom">
+                                    <p class="today_phn_nm">One plus 6</p>
+                                    <p class="today_phn_price">Rs. 33,7999</p>
+                                    <div class="star_rating">
+                                        <span class="fa fa-star checked"></span>
+                                        <span class="fa fa-star checked"></span>
+                                        <span class="fa fa-star checked"></span>
+                                        <span class="fa fa-star checked"></span>
+                                        <span class="fa fa-star"></span>
+                                    </div>
+                                    <a href="#" class="red_txt">Read More</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                 </div>
+             </div>
+         </div>
+         <h2 class="media-heading ribbon1">&nbsp;</h2>
+     </div>
+     <!--banner section ends-->
+
+     <!--Categories-->
+     <div class="categories">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4 col-lg-4 col-xs-12 col-sm-12 text-center">
+                    <div class="categ">
+                        <p class="categ_name"><a href="#">Mobile Phones</a></p>
+                        <img src="images/best-price.png" class="img-responsive center_img" />
+                    </div>
+                </div>
+                <div class="col-md-4 col-lg-4 col-xs-12 col-sm-12 text-center mob_view">
+                    <div class="categ">
+                        <p class="categ_name"><a href="#">Tablets</a></p>
+                        <img src="images/time-saving.png" class="img-responsive center_img" />
+                    </div>
+                </div>
+                <div class="col-md-4 col-lg-4 col-xs-12 col-sm-12 text-center mob_view">
+                    <div class="categ">
+                        <p class="categ_name"><a href="#">Books</a></p>
+                        <img src="images/more-choice.png" class="img-responsive center_img" />
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+     <!--Categories ends-->
+
+     <!--Deals-->
+     <div class="deals">
+         <div class="container">
+             <div class="row">
+                 <div class="col-md-8 col-lg-8 col-xs-12 col-sm-12">
+                     <div class="heading"><p>Deals of the day</p></div>
+                        <div id="mixedSlider">
+                            <div class="MS-content">
+                                <div class="item">
+                                    <div class="imgTitle">
+                                        <img src="images/dummy.jpg" class="img-responsive center_img" alt="" />
+                                    </div>
+                                    <div class="phone_name text-center">
+                                        <p class="phn_nm">Samsung Gaaxy J7 MAX</p>
+                                        <p class="phn_price">Rs. 14,7999</p>
+                                        <div class="star_rating">
+                                            <span class="fa fa-star checked"></span>
+                                            <span class="fa fa-star checked"></span>
+                                            <span class="fa fa-star checked"></span>
+                                            <span class="fa fa-star"></span>
+                                            <span class="fa fa-star"></span>
+                                        </div>
+                                        <a href="#" class="red_txt">Read More</a>
+                                    </div>
+                                </div>
+                                <div class="item">
+                                    <div class="imgTitle">
+                                        <img src="images/dummy.jpg" class="img-responsive center_img" alt="" />
+                                    </div>
+                                    <div class="phone_name text-center">
+                                        <p class="phn_nm">Samsung Gaaxy J7 MAX</p>
+                                        <p class="phn_price">Rs. 14,7999</p>
+                                        <div class="star_rating">
+                                            <span class="fa fa-star checked"></span>
+                                            <span class="fa fa-star checked"></span>
+                                            <span class="fa fa-star checked"></span>
+                                            <span class="fa fa-star"></span>
+                                            <span class="fa fa-star"></span>
+                                        </div>
+                                        <a href="#" class="red_txt">Read More</a>
+                                    </div>
+                                </div>
+                                <div class="item">
+                                    <div class="imgTitle">
+                                        <img src="images/dummy.jpg" class="img-responsive center_img" alt="" />
+                                    </div>
+                                    <div class="phone_name text-center">
+                                        <p class="phn_nm">Samsung Gaaxy J7 MAX</p>
+                                        <p class="phn_price">Rs. 14,7999</p>
+                                        <div class="star_rating">
+                                            <span class="fa fa-star checked"></span>
+                                            <span class="fa fa-star checked"></span>
+                                            <span class="fa fa-star checked"></span>
+                                            <span class="fa fa-star"></span>
+                                            <span class="fa fa-star"></span>
+                                        </div>
+                                        <a href="#" class="red_txt">Read More</a>
+                                    </div>
+                                </div>
+                                <div class="item">
+                                    <div class="imgTitle">
+                                        <img src="images/dummy.jpg" class="img-responsive center_img" alt="" />
+                                    </div>
+                                    <div class="phone_name text-center">
+                                        <p class="phn_nm">Samsung Gaaxy J7 MAX</p>
+                                        <p class="phn_price">Rs. 14,7999</p>
+                                        <div class="star_rating">
+                                            <span class="fa fa-star checked"></span>
+                                            <span class="fa fa-star checked"></span>
+                                            <span class="fa fa-star checked"></span>
+                                            <span class="fa fa-star"></span>
+                                            <span class="fa fa-star"></span>
+                                        </div>
+                                        <a href="#" class="red_txt">Read More</a>
+                                    </div>
+                                </div>
+                                <div class="item">
+                                    <div class="imgTitle">
+                                        <img src="images/dummy.jpg" class="img-responsive center_img" alt="" />
+                                    </div>
+                                    <div class="phone_name text-center">
+                                        <p class="phn_nm">Samsung Gaaxy J7 MAX</p>
+                                        <p class="phn_price">Rs. 14,7999</p>
+                                        <div class="star_rating">
+                                            <span class="fa fa-star checked"></span>
+                                            <span class="fa fa-star checked"></span>
+                                            <span class="fa fa-star checked"></span>
+                                            <span class="fa fa-star"></span>
+                                            <span class="fa fa-star"></span>
+                                        </div>
+                                        <a href="#" class="red_txt">Read More</a>
+                                    </div>
+                                </div>
+                                
+                            </div>
+                            <div class="MS-controls">
+                                <button class="MS-left"><i class="fa fa-angle-left" aria-hidden="true"></i></button>
+                                <button class="MS-right"><i class="fa fa-angle-right" aria-hidden="true"></i></button>
+                            </div>
+                        </div>
+                    </div> 
+                    <div class="col-lg-4 col-md-4 col-sm-12 col-xs-12 mob_view">
+                        <div class="phone_fight">
+                            <div class="row">
+                                <div class="col-sm-12 col-lg-12 col-xs-12">
+                                    <form method="post" action="submit.php">
+                                        <ul class="budget_range">
+                                            <li>
+                                            <div class="col-md-12">
+                                                <label class="budget_txt">Budget Estimate </label>
+                                                <div id="slider-range-min"></div>
+                                            </div>
+                                            <div class="col-md-12">
+                                                <input type="text" id="amount" readonly>
+                                            </div>
+                                            </li>
+                                        </ul>
+                                    </form>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-lg-12 col-sm-12 col-xs-12 col-md-12">
+                                    <button type="button" class="btn btn-default big_btn">FIND A PHONE</button>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-lg-12 col-sm-12 col-xs-12 col-md-12">
+                                    <p class="red_txt">That you'd love to have!</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>       
+                 </div>
+             </div>
+         </div>
+     </div>
+     <!--Deals End-->
+
+     <!--popular products-->
+	<div class="popular_poducts">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-8 col-lg-8 col-xs-12 col-sm-12">
+                    <div class="heading">
+                        <p>popular products</p>
+                    </div> 
+                    <div class="row">
+                        <div class="col-md-3 col-lg-3 col-xs-3 col-sm-3">
+							<img src="images/dummy.jpg" class="img-responsive center_img" alt="" />
+							<div class="phone_name text-center">
+								<p class="phn_nm">Samsung Gaaxy J7 MAX</p>
+								<p class="phn_price">Rs. 14,7999</p>
+								<div class="star_rating">
+									<span class="fa fa-star checked"></span>
+									<span class="fa fa-star checked"></span>
+									<span class="fa fa-star checked"></span>
+									<span class="fa fa-star"></span>
+									<span class="fa fa-star"></span>
+								</div>
+								<a href="#" class="red_txt">Read More</a>
+							</div>
+						</div>
+						<div class="col-md-3 col-lg-3 col-xs-3 col-sm-3">
+							<img src="images/dummy.jpg" class="img-responsive center_img" alt="" />
+							<div class="phone_name text-center">
+								<p class="phn_nm">Samsung Gaaxy J7 MAX</p>
+								<p class="phn_price">Rs. 14,7999</p>
+								<div class="star_rating">
+									<span class="fa fa-star checked"></span>
+									<span class="fa fa-star checked"></span>
+									<span class="fa fa-star checked"></span>
+									<span class="fa fa-star"></span>
+									<span class="fa fa-star"></span>
+								</div>
+								<a href="#" class="red_txt">Read More</a>
+							</div>
+						</div>
+						<div class="col-md-3 col-lg-3 col-xs-3 col-sm-3">
+							<img src="images/dummy.jpg" class="img-responsive center_img" alt="" />
+							<div class="phone_name text-center">
+								<p class="phn_nm">Samsung Gaaxy J7 MAX</p>
+								<p class="phn_price">Rs. 14,7999</p>
+								<div class="star_rating">
+									<span class="fa fa-star checked"></span>
+									<span class="fa fa-star checked"></span>
+									<span class="fa fa-star checked"></span>
+									<span class="fa fa-star"></span>
+									<span class="fa fa-star"></span>
+								</div>
+								<a href="#" class="red_txt">Read More</a>
+							</div>
+                        </div>
+                        <div class="col-md-3 col-lg-3 col-xs-3 col-sm-3">
+                            <img src="images/dummy.jpg" class="img-responsive center_img" alt="" />
+                            <div class="phone_name text-center">
+                                <p class="phn_nm">Samsung Gaaxy J7 MAX</p>
+                                <p class="phn_price">Rs. 14,7999</p>
+                                <div class="star_rating">
+                                    <span class="fa fa-star checked"></span>
+                                    <span class="fa fa-star checked"></span>
+                                    <span class="fa fa-star checked"></span>
+                                    <span class="fa fa-star"></span>
+                                    <span class="fa fa-star"></span>
+                                </div>
+                                <a href="#" class="red_txt">Read More</a>
+                            </div>
+                        </div> 
+					</div>
+				</div>
+				<div class="col-lg-4 col-md-4 col-sm-12 col-xs-12 mob_view">
+					<div class="phone_fight">
+						<div class="row">
+							<div class="col-md-6 col-lg-6 col-xs-6 col-sm-6">
+								<img src="images/compare1.jpg" class="img-responsive center_img phone_size" alt="samsung galaxy j7 max" />
+								<div class="phone_name">
+									<p class="phn_nm">Samsung Gaaxy J7 MAX</p>
+									<p class="phn_price">Rs. 14,7999</p>
+									<div class="star_rating">
+										<span class="fa fa-star checked"></span>
+										<span class="fa fa-star checked"></span>
+										<span class="fa fa-star checked"></span>
+										<span class="fa fa-star"></span>
+										<span class="fa fa-star"></span>
+									</div>
+								</div>
+							</div>
+							<div class="col-md-6 col-lg-6 col-xs-6 col-sm-6">
+								<img src="images/compare2.jpg" class="img-responsive center_img phone_size" alt="samsung galaxy j8" />
+								<div class="phone_name">
+									<p class="phn_nm">Samsung Gaaxy J8</p>
+									<p class="phn_price">Rs. 14,7999</p>
+									<div class="star_rating">
+										<span class="fa fa-star checked"></span>
+										<span class="fa fa-star checked"></span>
+										<span class="fa fa-star checked"></span>
+										<span class="fa fa-star"></span>
+										<span class="fa fa-star"></span>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="row">
+							<div class="col-lg-12 col-sm-12 col-xs-12 col-md-12">
+								<button type="button" class="btn btn-default big_btn">PHONE FIGHT</button>
+							</div>
+						</div>
+						<div class="row">
+							<div class="col-lg-12 col-sm-12 col-xs-12 col-md-12">
+								<p class="red_txt">Decide which phone suits you best</p>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+     <!--popular products ends-->
+    <!--comparison-->
+    <div class="comparison">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4 col-lg-4 col-xs-12 col-sm-12 text-center" style="border-right: 1px dotted #eee;">
+                    <div class="heading_bg">
+                        <p>recent comparison</p>
+                    </div>
+                    <div class="box"><!-- Div that will hold the UL -->
+                        <div class="scroll">
+                            <ul class="comp">
+                                <li class="brand_search"><a href="#">
+                                    <img src="images/1.png" class="img-responsive" align="left" /> <span class="vs">vs</span> <img src="images/3.png" class="img-responsive" align="left" />
+                                    &nbsp;&nbsp;<p>Micromax Mobile Price List vs Micromax Mobile Price List</p>
+                                </a></li>
+                                <li class="brand_search"><a href="#">
+                                    <img src="images/2.png" class="img-responsive" align="left" /> <span class="vs">vs</span> <img src="images/5.png" class="img-responsive" align="left" />
+                                    &nbsp;&nbsp;<p>Micromax Mobile Price List vs Micromax Mobile Price List</p>
+                                </a></li>
+                                <li class="brand_search"><a href="#">
+                                    <img src="images/3.png" class="img-responsive" align="left" /> <span class="vs">vs</span> <img src="images/6.png" class="img-responsive" align="left" />
+                                    &nbsp;&nbsp;<p>Micromax Mobile Price List vs Micromax Mobile Price List</p>
+                                </a></li>
+                                <li class="brand_search"><a href="#">
+                                    <img src="images/4.png" class="img-responsive" align="left" /> <span class="vs">vs</span> <img src="images/7.png" class="img-responsive" align="left" />
+                                    &nbsp;&nbsp;<p>Micromax Mobile Price List vs Micromax Mobile Price List</p>
+                                </a></li>
+                                <li class="brand_search"><a href="#">
+                                    <img src="images/1.png" class="img-responsive" align="left" /> <span class="vs">vs</span> <img src="images/3.png" class="img-responsive" align="left" />
+                                    &nbsp;&nbsp;<p>Micromax Mobile Price List vs Micromax Mobile Price List</p>
+                                </a></li>
+                                <li class="brand_search"><a href="#">
+                                    <img src="images/2.png" class="img-responsive" align="left" /> <span class="vs">vs</span> <img src="images/5.png" class="img-responsive" align="left" />
+                                    &nbsp;&nbsp;<p>Micromax Mobile Price List vs Micromax Mobile Price List</p>
+                                </a></li>
+                                <li class="brand_search"><a href="#">
+                                    <img src="images/3.png" class="img-responsive" align="left" /> <span class="vs">vs</span> <img src="images/6.png" class="img-responsive" align="left" />
+                                    &nbsp;&nbsp;<p>Micromax Mobile Price List vs Micromax Mobile Price List</p>
+                                </a></li>
+                                <li class="brand_search"><a href="#">
+                                    <img src="images/4.png" class="img-responsive" align="left" /> <span class="vs">vs</span> <img src="images/7.png" class="img-responsive" align="left" />
+                                    &nbsp;&nbsp;<p>Micromax Mobile Price List vs Micromax Mobile Price List</p>
+                                </a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 col-lg-4 col-xs-12 col-sm-12 mob_view text-center" style="border-right: 1px dotted #eee;">
+                    <div class="heading_bg">
+                        <p>popular searches</p>
+                    </div>
+                    <div class="box"><!-- Div that will hold the UL -->
+                        <div class="scroll" style="width:100%">
+                            <ul class="comp">
+                                <li class="brand_search"><a href="#">
+                                    <img src="images/1.png" class="img-responsive" align="left" />
+                                    &nbsp;&nbsp;<p>Micromax Mobile Price List</p>
+                                </a></li>
+                                <li class="brand_search"><a href="#">
+                                    <img src="images/2.png" class="img-responsive" align="left" />
+                                    &nbsp;&nbsp;<p>Micromax Mobile Price List</p>
+                                </a></li>
+                                <li class="brand_search"><a href="#">
+                                    <img src="images/3.png" class="img-responsive" align="left" />
+                                    &nbsp;&nbsp;<p>Micromax Mobile Price List</p>
+                                </a></li>
+                                <li class="brand_search"><a href="#">
+                                    <img src="images/4.png" class="img-responsive" align="left" />
+                                    &nbsp;&nbsp;<p>Micromax Mobile Price List</p>
+                                </a></li>
+                                <li class="brand_search"><a href="#">
+                                    <img src="images/1.png" class="img-responsive" align="left" />
+                                    &nbsp;&nbsp;<p>Micromax Mobile Price List</p>
+                                </a></li>
+                                <li class="brand_search"><a href="#">
+                                    <img src="images/2.png" class="img-responsive" align="left" />
+                                    &nbsp;&nbsp;<p>Micromax Mobile Price List</p>
+                                </a></li>
+                                <li class="brand_search"><a href="#">
+                                    <img src="images/3.png" class="img-responsive" align="left" />
+                                    &nbsp;&nbsp;<p>Micromax Mobile Price List</p>
+                                </a></li>
+                                <li class="brand_search"><a href="#">
+                                    <img src="images/4.png" class="img-responsive" align="left" />
+                                    &nbsp;&nbsp;<p>Micromax Mobile Price List</p>
+                                </a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 col-lg-4 col-xs-12 col-sm-12 mob_view text-center">
+                    <div class="heading_bg">
+                        <p>top comparison</p>
+                    </div>
+                    <div class="box">
+                        <div class="scroll">
+                            <ul class="comp">
+                                <li class="brand_search"><a href="#">
+                                    <img src="images/1.png" class="img-responsive" align="left" /> <span class="vs">vs</span> <img src="images/3.png" class="img-responsive" align="left" />
+                                    &nbsp;&nbsp;<p>Micromax Mobile Price List vs Micromax Mobile Price List</p>
+                                </a></li>
+                                <li class="brand_search"><a href="#">
+                                    <img src="images/2.png" class="img-responsive" align="left" /> <span class="vs">vs</span> <img src="images/5.png" class="img-responsive" align="left" />
+                                    &nbsp;&nbsp;<p>Micromax Mobile Price List vs Micromax Mobile Price List</p>
+                                </a></li>
+                                <li class="brand_search"><a href="#">
+                                    <img src="images/3.png" class="img-responsive" align="left" /> <span class="vs">vs</span> <img src="images/6.png" class="img-responsive" align="left" />
+                                    &nbsp;&nbsp;<p>Micromax Mobile Price List vs Micromax Mobile Price List</p>
+                                </a></li>
+                                <li class="brand_search"><a href="#">
+                                    <img src="images/4.png" class="img-responsive" align="left" /> <span class="vs">vs</span> <img src="images/7.png" class="img-responsive" align="left" />
+                                    &nbsp;&nbsp;<p>Micromax Mobile Price List vs Micromax Mobile Price List</p>
+                                </a></li>
+                                <li class="brand_search"><a href="#">
+                                    <img src="images/1.png" class="img-responsive" align="left" /> <span class="vs">vs</span> <img src="images/3.png" class="img-responsive" align="left" />
+                                    &nbsp;&nbsp;<p>Micromax Mobile Price List vs Micromax Mobile Price List</p>
+                                </a></li>
+                                <li class="brand_search"><a href="#">
+                                    <img src="images/2.png" class="img-responsive" align="left" /> <span class="vs">vs</span> <img src="images/5.png" class="img-responsive" align="left" />
+                                    &nbsp;&nbsp;<p>Micromax Mobile Price List vs Micromax Mobile Price List</p>
+                                </a></li>
+                                <li class="brand_search"><a href="#">
+                                    <img src="images/3.png" class="img-responsive" align="left" /> <span class="vs">vs</span> <img src="images/6.png" class="img-responsive" align="left" />
+                                    &nbsp;&nbsp;<p>Micromax Mobile Price List vs Micromax Mobile Price List</p>
+                                </a></li>
+                                <li class="brand_search"><a href="#">
+                                    <img src="images/4.png" class="img-responsive" align="left" /> <span class="vs">vs</span> <img src="images/7.png" class="img-responsive" align="left" />
+                                    &nbsp;&nbsp;<p>Micromax Mobile Price List vs Micromax Mobile Price List</p>
+                                </a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--compariosn ends-->
+
+     <!--upcoming products-->
+	<div class="upcoming_poducts">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-8 col-lg-8 col-xs-12 col-sm-12">
+                    <div class="heading">
+                        <p>upcoming products</p>
+                    </div> 
+                    <div class="row">
+                        <div class="col-md-3 col-lg-3 col-xs-3 col-sm-3">
+							<img src="images/dummy.jpg" class="img-responsive center_img" alt="" />
+							<div class="phone_name text-center">
+								<p class="phn_nm">Samsung Gaaxy J7 MAX</p>
+								<p class="phn_price">Rs. 14,7999</p>
+								<div class="star_rating">
+									<span class="fa fa-star checked"></span>
+									<span class="fa fa-star checked"></span>
+									<span class="fa fa-star checked"></span>
+									<span class="fa fa-star"></span>
+									<span class="fa fa-star"></span>
+								</div>
+								<a href="#" class="red_txt">Read More</a>
+							</div>
+						</div>
+						<div class="col-md-33 col-lg-3 col-xs-3 col-sm-3">
+							<img src="images/dummy.jpg" class="img-responsive center_img" alt="" />
+							<div class="phone_name text-center">
+								<p class="phn_nm">Samsung Gaaxy J7 MAX</p>
+								<p class="phn_price">Rs. 14,7999</p>
+								<div class="star_rating">
+									<span class="fa fa-star checked"></span>
+									<span class="fa fa-star checked"></span>
+									<span class="fa fa-star checked"></span>
+									<span class="fa fa-star"></span>
+									<span class="fa fa-star"></span>
+								</div>
+								<a href="#" class="red_txt">Read More</a>
+							</div>
+						</div>
+						<div class="col-md-3 col-lg-3 col-xs-3 col-sm-3">
+							<img src="images/dummy.jpg" class="img-responsive center_img" alt="" />
+							<div class="phone_name text-center">
+								<p class="phn_nm">Samsung Gaaxy J7 MAX</p>
+								<p class="phn_price">Rs. 14,7999</p>
+								<div class="star_rating">
+									<span class="fa fa-star checked"></span>
+									<span class="fa fa-star checked"></span>
+									<span class="fa fa-star checked"></span>
+									<span class="fa fa-star"></span>
+									<span class="fa fa-star"></span>
+								</div>
+								<a href="#" class="red_txt">Read More</a>
+							</div>
+                        </div> 
+                        <div class="col-md-3 col-lg-3 col-xs-3 col-sm-3">
+                            <img src="images/dummy.jpg" class="img-responsive center_img" alt="" />
+                            <div class="phone_name text-center">
+                                <p class="phn_nm">Samsung Gaaxy J7 MAX</p>
+                                <p class="phn_price">Rs. 14,7999</p>
+                                <div class="star_rating">
+                                    <span class="fa fa-star checked"></span>
+                                    <span class="fa fa-star checked"></span>
+                                    <span class="fa fa-star checked"></span>
+                                    <span class="fa fa-star"></span>
+                                    <span class="fa fa-star"></span>
+                                </div>
+                                <a href="#" class="red_txt">Read More</a>
+                            </div>
+                        </div>
+					</div>
+				</div>
+				<div class="col-lg-4 col-md-4 col-sm-12 col-xs-12 mob_view">
+					<div class="phone_fight">
+						<div class="row">
+							<div class="col-md-12 col-lg-12 col-sm-12 text-center">   
+								<h1 class="ribbon_txt ribbon">Trending Searches</h1>
+								<div class="row m-t-20"> 
+                                    <div class="col-md-6 col-lg-6 col-xs-6 col-sm-6">
+                                        <ul class="trending">
+                                            <li class="brand_search"><a href="#">
+                                                <img src="images/1.png" class="img-responsive" align="left" />
+                                                <p>Nokia Mobile Price List</p>
+                                            </a></li>
+                                            <li class="brand_search"><a href="#">
+                                                <img src="images/2.png" class="img-responsive" align="left" />
+                                                <p>Samsung Mobile Price List</p>
+                                            </a></li>
+                                            <li class="brand_search"><a href="#">
+                                                <img src="images/3.png" class="img-responsive" align="left" />
+                                                <p>LG Mobile Price List</p>
+                                            </a></li>
+                                            <li class="brand_search"><a href="#">
+                                                <img src="images/4.png" class="img-responsive" align="left" />
+                                                <p>Motorola Mobile Price List</p>
+                                            </a></li>
+                                            <li class=""><a href="#">
+                                                <img src="images/5.png" class="img-responsive" align="left" />
+                                                <p>Sony Mobile Price List</p>
+                                            </a></li>
+                                        </ul>
+                                    </div>
+                                    <div class="col-md-6 col-lg-6 col-xs-6 col-sm-6">
+                                        <ul class="trending">
+                                            <li class="brand_search"><a href="#">
+                                                <img src="images/6.png" class="img-responsive" align="left" />
+                                                <p>HTC Mobile Price List</p>
+                                            </a></li>
+                                            <li class="brand_search"><a href="#">
+                                                <img src="images/7.png" class="img-responsive" align="left" />
+                                                <p>Blackberry Mobile Price List</p>
+                                            </a></li>
+                                            <li class="brand_search"><a href="#">
+                                                <img src="images/8.png" class="img-responsive" align="left" />
+                                                <p>Apple mobile Price List</p>
+                                            </a></li>
+                                            <li class="brand_search"><a href="#">
+                                                <img src="images/11.png" class="img-responsive" align="left" />
+                                                <p>Spice Mobile Price List</p>
+                                            </a></li>
+                                            <li class=""><a href="#">
+                                                <img src="images/13.png" class="img-responsive" align="left" />
+                                                <p>Micromax Mobile Price List</p>
+                                            </a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!--upcoming products ends-->
+
+    <!--footer-->
+    <div class="footer">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-3 col-lg-3 col-xs-12 col-sm-12">
+                    <section class="home-newsletter">
+                        <div class="single">
+                            <h2>Subscribe to our Newsletter</h2>
+                            <div class="input-group">
+                                <input type="email" class="form-control" placeholder="Enter your email">
+                                <span class="input-group-btn">
+                                <button class="btn btn-theme" type="submit">Subscribe</button>
+                                </span>
+                            </div>
+                        </div>
+                    </section>
+                    <ul class="scl_lst1">
+                        <!-- <li>Follow us on:</li> -->
+                        <li><a href="#"><i class="fa fa-facebook-f"></i></a></li>
+                        <li><a href="#"><i class="fa fa-google-plus"></i></a></li>
+                        <li><a href="#"><i class="fa fa-linkedin"></i></a></li>
+                        <li><a href="#"><i class="fa fa-twitter"></i></a></li>
+                    </ul>
+                </div>
+                <div class="col-md-3 col-lg-3 col-xs-12 col-sm-12">
+                    <div class="ftr_name"><p>mobile list</p></div>
+                    <ul class="ftr_lst">
+                        <li><a href="#">Nokia Mobiles</a></li>
+                        <li><a href="#">Samsung Mobiles</a></li>
+                        <li><a href="#">Oppo Mobiles</a></li>
+                        <li><a href="#">Vivo Mobiles</a></li>
+                        <li><a href="#">HTC Mobiles</a></li>
+                        <li><a href="#">Motorola Mobiles</a></li>
+                        <li><a href="#">Mi Mobiles</a></li>
+                        <li><a href="#">Sony Mobiles</a></li>
+                        <li><a href="#">Lenovo Mobiles</a></li>
+                        <li><a href="#">Gionee Mobiles</a></li>
+                        <li><a href="#">Micromax Mobiles</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-3 col-lg-3 col-xs-12 col-sm-12">
+                    <div class="ftr_name"><p>categoies</p></div>
+                    <ul class="ftr_lst">
+                        <li><a href="#">Smart Phones</a></li>
+                        <li><a href="#">VoLTE Mobiles</a></li>
+                        <li><a href="#">4G Mobiles</a></li>
+                        <li><a href="#">3G Mobiles</a></li>
+                        <li><a href="#">Latest Mobiles</a></li>
+                        <li><a href="#">Upcoming Mobiles</a></li>
+                        <li><a href="#">Dual Sim Mobiles</a></li>
+                        <li><a href="#">4GB RAM Mobiles</a></li>
+                        <li><a href="#">Fingerprint Mobiles</a></li>
+                        <li><a href="#">Selfie Mobiles</a></li>
+                        <li><a href="#">Android Mobiles</a></li>
+                        <li><a href="#">Lyf Mobiles</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-3 col-lg-3 col-xs-12 col-sm-12">
+                    <div class="ftr_name"><p>about</p></div>
+                    <ul class="ftr_lst">
+                        <li><a href="#">About Smartprix</a></li>
+                        <li><a href="#">About us</a></li>
+                        <li><a href="#">Jobs</a></li>
+                        <li><a href="#">Contact us</a></li>
+                        <li><a href="#">Help</a></li>
+                        <li><a href="#">Find a Mobile</a></li>
+                        <li><a href="#">Mobile Site</a></li>
+                        <li><a href="#">Laest News</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="sub_footer">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12 col-lg-12 col-xs-12 col-sm-12 text-center">
+                    <p class="sub_ftr_txt">&copy; 2011-2018  -  smartprix.com , All rights reserved  |  <a href="#">Privacy Policy</a>  |  <a href="#">Terms of service</a></p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--footer ends-->
+</body>
+
+
+<script src="js/jquery.min.js"></script>
+<script src="js/bootstrap.min.js"></script>
+
+<script src='http://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.11.2/jquery-ui.min.js'></script>
+<script src='https://adamkramer.nl/js/autosize.min.js'></script>
+<script src="js/main.js"></script>
+<script src="js/multislider.js"></script> 
+<script>
+    $('#mixedSlider').multislider({
+    duration: 750,
+    interval: 3000
+});
+
+</script>
+
+</html>
